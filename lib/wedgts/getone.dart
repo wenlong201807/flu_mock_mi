@@ -93,34 +93,46 @@ class MyHomePage extends StatelessWidget {
             ElevatedButton(
                 onPressed: () {
                   Get.bottomSheet(Container(
-                    color:Get.isDarkMode?Colors.black26:Colors.white,  // 切换主题后，文字同步变化
+                    color: Get.isDarkMode
+                        ? Colors.black26
+                        : Colors.white, // 切换主题后，文字同步变化
                     height: 200,
                     child: Column(
-                      children:  [
+                      children: [
                         ListTile(
                           leading: Icon(Icons.wb_sunny_outlined,
-                              color: Get.isDarkMode?Colors.white:Colors.black87),
-                          onTap: (){
+                              color: Get.isDarkMode
+                                  ? Colors.white
+                                  : Colors.black87),
+                          onTap: () {
                             //切换主题
                             Get.changeTheme(ThemeData.light());
                             Get.back();
-
                           },
-                          title:  Text(
+                          title: Text(
                             "白天模式",
-                            style: TextStyle(color: Get.isDarkMode?Colors.white:Colors.black87),
+                            style: TextStyle(
+                                color: Get.isDarkMode
+                                    ? Colors.white
+                                    : Colors.black87),
                           ),
                         ),
                         ListTile(
-                          leading: Icon(Icons.wb_sunny, color: Get.isDarkMode?Colors.white:Colors.black87),
-                          onTap: (){
+                          leading: Icon(Icons.wb_sunny,
+                              color: Get.isDarkMode
+                                  ? Colors.white
+                                  : Colors.black87),
+                          onTap: () {
                             //切换主题
                             Get.changeTheme(ThemeData.dark());
                             Get.back();
                           },
                           title: Text(
                             "夜晚模式",
-                            style: TextStyle(color: Get.isDarkMode?Colors.white:Colors.black87),
+                            style: TextStyle(
+                                color: Get.isDarkMode
+                                    ? Colors.white
+                                    : Colors.black87),
                           ),
                         )
                       ],
